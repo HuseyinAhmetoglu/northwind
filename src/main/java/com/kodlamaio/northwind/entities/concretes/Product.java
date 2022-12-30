@@ -1,6 +1,6 @@
 package com.kodlamaio.northwind.entities.concretes;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Products")
