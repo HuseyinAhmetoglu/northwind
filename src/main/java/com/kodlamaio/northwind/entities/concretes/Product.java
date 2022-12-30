@@ -1,12 +1,20 @@
 package com.kodlamaio.northwind.entities.concretes;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Product {
+    @Id
     private  int id;
     private  int categoryId;
     private  String productName;
     private double unitPrice;
     private short unitsInStock;
     private String quantityPerUnit;
+
+    public Product() {
+    }
 
     public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStock, String quantityPerUnit) {
         this.id = id;
@@ -64,4 +72,5 @@ public class Product {
     public void setQuantityPerUnit(String quantityPerUnit) {
         this.quantityPerUnit = quantityPerUnit;
     }
+
 }
