@@ -9,7 +9,7 @@ public class DataResult<T> extends Result {
         this.data = data;
     }
 
-    public DataResult(boolean success, T data) {
+    public DataResult(T data, boolean success) {
         super(success);
         this.data = data;
     }
