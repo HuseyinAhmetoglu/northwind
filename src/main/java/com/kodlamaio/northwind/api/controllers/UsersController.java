@@ -9,6 +9,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ public class UsersController {
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<?> add(@RequestBody User user) {
+    public ResponseEntity<?> add(@Valid @RequestBody User user) {
         return ResponseEntity.ok(this.userService.add(user));
     }
 
